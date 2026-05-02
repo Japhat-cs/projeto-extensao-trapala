@@ -1,0 +1,301 @@
+/* Reset básico para não dar erro de layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pagina-sobre {
+    padding: 120px 20px 60px; /* Dá espaço para o menu fixo */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8; /* melhora a leitura */
+}
+
+.pagina-sobre h1 {
+    color: #ffd700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.conteudo-texto p{
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #ddd;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #121212; /* Fundo preto/grafite */
+    color: #ffffff;
+}
+
+/* Hero Section com imagem de fundo */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bandatony.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#musica {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a; /* Um tom levemente diferente para separar as seções */
+}
+
+#musica h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #ffd700;
+}
+
+.spotify-container {
+    max-width: 800px; /* Não deixa o player ficar largo demais em telas grandes */
+    margin: 0 auto;   /* Centraliza o container */
+}
+
+
+h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    color: #ffd700; /* Um dourado para destaque */
+}
+
+.btn-contato {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+#agenda {
+    padding: 60px 20px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.agenda-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.agenda-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e1e1e;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border-left: 5px solid #ffd700; /* Detalhe em dourado */
+}
+
+.agenda-item:hover {
+    transform: scale(1.02);
+    background: #252525;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    min-width: 80px;
+}
+
+.dia { font-size: 1.8rem; font-weight: bold; color: #ffd700; }
+.mes { font-size: 0.9rem; color: #aaa; }
+
+.info { text-align: left; flex-grow: 1; margin-left: 20px; }
+.info h3 { font-size: 1.2rem; }
+.info p { color: #ccc; font-size: 0.9rem; }
+
+.btn-ticket {
+    padding: 10px 20px;
+    border: 1px solid #ffd700;
+    color: #ffd700;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    .agenda-item { flex-direction: column; text-align: center; }
+    .info { margin: 15px 0; text-align: center; }
+}
+
+/* Botão Flutuante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 35px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0a0a0a;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-content h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.redes-sociais a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: #666;
+}
+
+/* Deixa o menu fixo no topo */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Preto com leve transparência */
+    padding: 15px 0;
+    z-index: 1000; /* Garante que o menu fique acima de tudo */
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Espaço entre os links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Efeito de cor ao passar o mouse */
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* Linha bonitinha que aparece embaixo do link no hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Ajuste para o Hero não ficar "embaixo" do menu fixo */
+#hero {
+    padding-top: 80px;
+}
+
+
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    /* Ajustes do Hero (Foto) */
+    #hero {
+        background-attachment: scroll;
+        height: 60vh;
+        background-size: cover; 
+        background-position: center center;
+        padding-top: 120px; /* Dá espaço para o menu que cresceu */
+    }
+
+    /* Ajustes do Menu (Agora fora do #hero) */
+    .navbar {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
